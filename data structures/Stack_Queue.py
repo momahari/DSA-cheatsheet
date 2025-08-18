@@ -62,10 +62,10 @@ class Queue:
         return '--> '.join(self.buffer)
 
     def enqueue(self, value):
-        return self.buffer.appendleft(value)  # the equivlant of insert() with list
+        return self.buffer.append(value)   # we can also use insert() or appendleft() but to dequeue we're gonna need to use pop()
 
     def dequeue(self):
-        return self.buffer.pop()
+        return self.buffer.popleft()
 
     def clear_queue(self):
         return self.buffer.clear()
